@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>???</title>
+        <link rel="stylesheet" href="style.css" />
+        <style>
+        @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+:root {
+    color-scheme: dark;
+
+    --black: #000;
+    --white: #fff;
+
+    --anim-speed: 2s;
+
+    --max-w: 1300px;
+
+    --fs0: 9px;
+    --fs1: 14px;
+    --fs2: 24px;
+}
+
+*,
+*::before,
+*::after {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 1em;
+    background-color: var(--black);
+}
+
+#hidden-content {
+    text-align: left;
+}
+
+#play-button {
+    font-size: var(--fs2);
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--black);
+    color: white;
+    cursor: pointer;
+    animation: fade-in var(--anim-speed) ease-in-out forwards;
+}
+
+#play-button:hover {
+    background-color: var(--black);
+}
+
+#truth-button {
+    position: fixed;
+    bottom:-10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: var(--fs0);
+    padding: 1px 0px;
+    border: none;   
+    background-color: var(--black);
+    color: black;
+}
+
+#truth-button:hover {
+    position: fixed;
+    bottom:-10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: var(--fs0);
+    padding: 10px 0px;
+    border: none;
+    background-color: var(--black);
+    color: white;
+}
+
+#hidden-text {
+    font-family: "open sans", "Courier New", Courier, monospace;
+    /* font-weight: bold; */
+    font-style: italic;
+    display: none;
+    color: white;
+    font-size: var(--fs1);
+    max-width: var(--max-w);
+    animation: fade-in var(--anim-speed) ease-in-out forwards;
+}
+
+#hidden-text::selection {
+    color: var(--black); /* text color when selected */
+    background-color: var(--white); /* bg color when selected */
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        -webkit-animation-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+
+        -webkit-animation-iteration-count: 1 !important;
+        animation-iteration-count: 1 !important;
+
+        -webkit-transition-duration: 0.01ms !important;
+        -o-transition-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+}
+
+
+        </style>
+        <meta name="description" content="???" />
+        <meta
+            name="keywords"
+            content="???, question, life, lifestyle, philosophy, personal, audio, music, dark, meaning of life, quote"
+        />
+        <meta
+            name="robots"
+            content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="color-scheme" content="dark" />
+        <meta name="theme-color" content="black" />
+
+        <script>
+
+document.addEventListener("DOMContentLoaded", () => {
+    let play_button = document.getElementById("play-button");
+    let audio_player = document.getElementById("audio-player");
+    let hidden_text = document.getElementById("hidden-text");
+
+    play_button.addEventListener("click", () => {
+        audio_player.play();
+        play_button.style.display = "none";
+        hidden_text.style.display = "block";
+    });
+});
+
+    </script>
+    </head>
+    <body>
+        <div id="hidden-content">
+            <button id="play-button">click me.</button>
+            <audio id="audio-player" loop>
+                <source src="audio/srbs.mp3" type="audio/mpeg" />
+            </audio>
+            <p id="hidden-text">
+              The relentless quest for understanding, akin to an anchor that refuses to yield, presses heavily upon my consciousness, pulling me into the depths of introspection. Within the solemn silence of reflection, I wrestle with the pervasive sense of futility that saturates every aspect of existence. Once-meaningful elements of life, now devoid of their former radiance, cast long shadows of emptiness across the canvas of my thoughts, leaving behind a vast void that seems insurmountable. The daily routines, once filled with purpose, now appear as endless loops of despair, each day blending into the next in a monotonous procession. The pursuit of progress, once a beacon of optimism, now feels like chasing shadows in the night, each advancement tinged with the unsettling notion that it might lead only to a chasm of meaninglessness. In the midst of this relentless journey, I find myself adrift, desperately searching for even the faintest hint of meaning amidst the prevailing darkness. The guiding light that once illuminated my path has faded into obscurity, leaving me to navigate the maze of existence without guidance or direction. It's as though we are all wanderers in a universe indifferent to our struggles, grappling with the existential weight of our purposelessness within its vast expanse. The idea of a definitive and universally applicable meaning seems like a distant illusion, forever beyond our grasp, taunting us with its elusive allure. And yet, despite the desolation that surrounds us, a fragile glimmer of hope endures—a hope born of our innate capacity to construct meaning from the fragments of our existence, even in the face of overwhelming uncertainty. But this prospect is not without its burdens. Sailing through life without a guiding star is an unyielding trial, testing the limits of our resilience and compelling us to confront the profound depths of our doubts. At times, in moments of introspection, I yearn for an alternate path—a reality where I might have been born into a different existence, one that resonates more deeply with my true self. Yet, within the depths of contemplation, the painful truth emerges that the pursuit of meaning may itself be a futile endeavor, fraught with shadows of despair. It demands that we confront the daunting questions and insurmountable uncertainties that define our existence, including the yearning for a reality that may forever elude us. The puzzle of life's meaning acts as both a source of comfort and shared anguish, uniting us in our collective battle against the vast emptiness that threatens to engulf us. Each question, every struggle, and every moment of reflection only adds to the overwhelming darkness of our existence, magnifying the burden of our concealed sorrows and unspoken aspirations. In this ceaseless struggle, we confront the crushing weight of existence, where despair reigns supreme and hope has long since faded away. We are mere spectators in a tragic drama, condemned to replay our meaningless roles in a universe that remains indifferent to our suffering. As we journey through this dismal landscape, our once-vibrant inquiries and ambitions decay into hollow echoes, mere reminders of our futile pursuit of meaning amidst the shadows that envelop us. In this abyss, humanity teeters on the brink of a grim and hopeless future, where the very notion of purpose has been swallowed by the void, leaving us adrift in a sea of desolation, forever adrift and without solace, burdened by the weight of our hidden sorrows and unrealized dreams.
+	    	      <br /><br />
+            - song: Wishing - Goodnight Dad I Love You.
+            </p>
+        </div>
+        <button id="truth-button">I search for the break; in my code</button>
+    </body>
+</html>
